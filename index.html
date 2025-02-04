@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Data Prediction</title>
+</head>
+
+<body>
+    <header>
+        <h1>Wine Data Prediction<h1>
+    </header>
+    <main>
+        <form action="{{url_for('predict')}}" method="post">
+            <label for="alcohol">Alcohol:</label>
+            <input type="text" id="alcohol" name="alcohol" required>
+
+            <label for="malic_acid">Malic Acid:</label>
+            <input type="text" id="malic_acid" name="malic_acid" required>
+
+            <label for="ash">Ash:</label>
+            <input type="text" id="ash" name="ash" required>
+
+            <label for="alcalinity_of_ash">Alcalinity of Ash:</label>
+            <input type="text" id="alcalinity_of_ash" name="alcalinity_of_ash" required>
+
+            <label for="magnesium">Magnesium:</label>
+            <input type="text" id="magnesium" name="magnesium" required>
+
+            <label for="total_phenols">Total Phenols:</label>
+            <input type="text" id="total_phenols" name="total_phenols" required>
+
+            <label for="flavanoids">flavanoids:</label>
+            <input type="text" id="flavanoids" name="flavanoids" required>
+
+            <label for="nonflavanoid_phenols">nonflavanoid_phenols:</label>
+            <input type="text" id="nonflavanoid_phenols" name="nonflavanoid_phenols" required>
+
+            <label for="proanthocyanins">proanthocyanins:</label>
+            <input type="text" id="proanthocyanins" name="proanthocyanins" required>
+
+            <label for="color_intensity">color_intensity:</label>
+            <input type="text" id="color_intensity" name="color_intensity" required>
+
+            <label for="hue">hue:</label>
+            <input type="text" id="hue" name="hue" required>
+
+            <label for="od280/od315_of_diluted_wines">od280/od315_of_diluted_wines:</label>
+            <input type="text" id="od280/od315_of_diluted_wines" name="od280/od315_of_diluted_wines" required>
+
+            <label for="proline">proline:</label>
+            <input type="text" id="proline" name="proline" required>
+
+            <button type="Submit">Predict</button>
+        </form>
+
+        {% if prediction_text%}
+            <h2>Result: {{prediction_text}}</h2>
+        {%endif%}
+    </main>
+</body>
+
+</html>
